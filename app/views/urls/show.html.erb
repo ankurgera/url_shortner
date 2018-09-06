@@ -1,0 +1,13 @@
+<h1> Url Shortner </h1>
+
+<% if @short_url.present? %>
+ Short url is <%= @short_url %>
+<% end %>
+
+<div id="url_shortner">
+<%= form_tag("/", method: "get") do %>
+<%= label_tag(:url, "Enter url:") %>
+<%= text_field_tag(:url) %>
+<%= submit_tag("Generate Short Url") %>
+<% end %>
+</div>
